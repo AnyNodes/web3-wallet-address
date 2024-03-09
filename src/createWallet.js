@@ -1,24 +1,28 @@
 const { ethers } = require('ethers');
 const fs = require('fs');
+const path = require('path');
 
-// create new wallet
-async function createWallet() {
-  const wallet = ethers.Wallet.createRandom();
-  const { address, privateKey } = wallet;
+// define the number of wallets to create
+const NUMBER_OF_WALLETS = 5; // change it on demand
 
-  // optional: create object that contains wallet info
-  const walletInfo = {
-    address,
-    privateKey,
-    mnemonic: wallet.mnemonic.phrase
-  };
+async function createMultipleWallets() {
+  let walletsInfo = [];
 
-  // save wallet info to local file
-  const filePath = path.join(__dirname, '..', 'walletInfo.json');
-  
-  fs.writeFileSync(filePath, JSON.stringify(walletInfo, null, 2));
+  for (let i = 0; i < NUMBER_OF_WALLETS; i++) {
+    const wallet = ethers.Wallet.createRandom();
+    const walletInfo = {
+      address: wallet.address,
+      privateKey: wallet.privateKey,
+      mnemonic: wallet.mnemonic.phrase,
+    };
+    walletsInfo.push(walletInfo);
+  }
 
-  console.log('Wallet is created and saved in walletInfo.json');
+  // save wallet into into the walletsInfo.json file in root dir
+  const filePath = path.join(__dirname, '..', 'walletsInfo.json');
+  fs.writeFileSync(filePath, JSON.stringify(walletsInfo, null, 2));
+
+  console.log(`${NUMBER_OF_WALLETS} wallets have been created and saved in ${filePath}`);
 }
 
-createWallet().catch(console.error);
+createMultipleWallets().catch(console.error);

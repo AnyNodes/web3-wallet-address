@@ -1,6 +1,6 @@
 {
   "name": "web3-wallet-address",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A simple tool to mass create web3 addresses",
   "main": "src/createWallet.js",
   "scripts": {
@@ -23,7 +23,6 @@
   "author": "AnyNodes",
   "license": "MIT",
   "dependencies": {
-    "ethers": "^6.11.1",
-    "shdw-node-stats-npm": "^1.0.2"
+    "ethers": "^6.11.1"
   }
 }
