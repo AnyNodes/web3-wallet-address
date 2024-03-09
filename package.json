@@ -1,0 +1,29 @@
+{
+  "name": "web3-wallet-address",
+  "version": "1.0.0",
+  "description": "A simple tool to mass create web3 addresses",
+  "main": "src/createWallet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnyNodes/web3-wallet-address.git"
+  },
+  "keywords": [
+    "web3",
+    "walletconnect",
+    "metamask",
+    "web3-provider",
+    "wallet",
+    "evm",
+    "address",
+    "eth"
+  ],
+  "author": "AnyNodes",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.11.1",
+    "shdw-node-stats-npm": "^1.0.2"
+  }
+}
