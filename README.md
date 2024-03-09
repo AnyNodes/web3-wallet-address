@@ -24,6 +24,17 @@ After installing `web3-wallet-address` via npm, you can use it in your project a
 const createWallet = require('web3-wallet-address');
 ```
 
+### As a script
+
+Fetch the repository, install dependency and execute the script
+
+```shell
+git clone https://github.com/AnyNodes/web3-wallet-address.git
+cd web3-wallet-address
+npm i
+node src/createWallet.js
+```
+
 ## Output
 
 It generate a JSON file named `walletInfo.json` in root dir.
