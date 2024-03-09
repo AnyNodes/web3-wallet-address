@@ -1,6 +1,6 @@
 {
   "name": "web3-wallet-address",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tool to mass create web3 addresses",
   "main": "src/createWallet.js",
   "scripts": {
