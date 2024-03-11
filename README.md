@@ -33,6 +33,8 @@ git clone https://github.com/AnyNodes/web3-wallet-address.git
 cd web3-wallet-address
 npm i
 node src/createWallet.js
+# or create Solana address
+node src/createSolWallet.js
 ```
 
 ## Output
