@@ -2,8 +2,8 @@ const { ethers } = require('ethers');
 const fs = require('fs');
 const path = require('path');
 
-// define the number of wallets to create
-const NUMBER_OF_WALLETS = 5; // change it on demand
+// Define the number of wallets to create
+const NUMBER_OF_WALLETS = 5; // Change it on demand
 
 async function createMultipleWallets() {
   let walletsInfo = [];
@@ -18,8 +18,12 @@ async function createMultipleWallets() {
     walletsInfo.push(walletInfo);
   }
 
-  // save wallet into into the walletsInfo.json file in root dir
-  const filePath = path.join(__dirname, '..', 'walletsInfo.json');
+  // Generate a timestamp for the filename
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const filename = `walletsInfo-${timestamp}.json`;
+
+  // Save wallet info into the file with timestamp in filename
+  const filePath = path.join(__dirname, '..', filename);
   fs.writeFileSync(filePath, JSON.stringify(walletsInfo, null, 2));
 
   console.log(`${NUMBER_OF_WALLETS} wallets have been created and saved in ${filePath}`);
