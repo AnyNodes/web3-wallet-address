@@ -1,0 +1,15 @@
+{
+  "DOT": {
+    "MAIN_ACCOUNT_SEED": "",
+    "EarningsAccount": ""
+  },
+  "SOL": {
+    "SOL_ACCOUNT_SEED": ""
+  },
+  "COSMOS": {
+    "COSMOS_ACCOUNT_SEED": ""
+  },
+  "EVM": {
+    "EVM_ACCOUNT_SEED": ""
+  }
+}
